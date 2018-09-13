@@ -9,11 +9,11 @@ Cookiecutter PyPackage
 .. image:: https://travis-ci.org/audreyr/cookiecutter-pypackage.svg?branch=master
     :target: https://travis-ci.org/audreyr/cookiecutter-pypackage     
 
-Cookiecutter_ template for a Python package.
+Cookiecutter_ template for a Python package aimed for Geru environment.
 
-* GitHub repo: https://github.com/audreyr/cookiecutter-pypackage/
+* GitHub repo: https://github.com/geru-br/cookiecutter-pypackage/
 * Documentation: https://cookiecutter-pypackage.readthedocs.io/
-* Free software: BSD license
+* Free software: GERU Intelectual Property
 
 Features
 --------
@@ -26,7 +26,7 @@ Features
 * Auto-release to PyPI_ when you push a new tag to master (optional)
 * Command line interface using Click (optional)
 
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _Cookiecutter: https://github.com/geru-br/cookiecutter
 
 Build Status
 -------------

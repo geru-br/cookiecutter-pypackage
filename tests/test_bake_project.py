@@ -163,13 +163,13 @@ def test_bake_selecting_license(cookies):
         'GNU General Public License v3': 'GNU GENERAL PUBLIC LICENSE',
     }
     for license, target_string in license_strings.items():
-        with bake_in_temp_dir(cookies, extra_context={'open_source_license': license}) as result:
+        with bake_in_temp_dir(cookies, extra_context={'license': license}) as result:
             assert target_string in result.project.join('LICENSE').read()
             assert license in result.project.join('setup.py').read()
 
 
 def test_bake_not_open_source(cookies):
-    with bake_in_temp_dir(cookies, extra_context={'open_source_license': 'Not open source'}) as result:
+    with bake_in_temp_dir(cookies, extra_context={'license': 'GERU Intelecttual Property'}) as result:
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert 'setup.py' in found_toplevel_files
         assert 'LICENSE' not in found_toplevel_files

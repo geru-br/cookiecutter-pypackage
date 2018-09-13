@@ -4,6 +4,7 @@ help:
 	@echo "bake 	generate project using defaults"
 	@echo "watch 	generate project using defaults and watch for changes"
 	@echo "replay 	replay last cookiecutter run and watch for changes"
+	@echo "clean    Remove python cache files. Safe to run always, since it will be recreated if not there. "
 
 bake:
 	cookiecutter $(BAKE_OPTIONS) . --overwrite-if-exists
@@ -13,4 +14,8 @@ watch: bake
 
 replay: BAKE_OPTIONS=--replay
 replay: watch
-	;
+	; 
+ 
+
+clean:
+	find . -name __pycache__ -o -name "*.pyc" | xargs rm -fr

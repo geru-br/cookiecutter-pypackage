@@ -18,6 +18,7 @@ setup_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest-runner',{%
 test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest',{%- endif %} ]
 
 {%- set license_classifiers = {
+    'GERU Intelectual Property': 'License :: Other/Proprietary',
     'MIT license': 'License :: OSI Approved :: MIT License',
     'BSD license': 'License :: OSI Approved :: BSD License',
     'ISC license': 'License :: OSI Approved :: ISC License (ISCL)',
@@ -25,23 +26,33 @@ test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest',{%- endif 
     'GNU General Public License v3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
 } %}
 
+{%- set language_classifiers = {
+        'English': 'Natural Language :: English',
+        'Portuguese (Brazilian)': 'Natural Language :: Portuguese (Brazilian)',
+} %}
+
 setup(
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
     author_email='{{ cookiecutter.email }}',
+    url='{{ cookiecutter.project_github_url }}',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
-{%- if cookiecutter.open_source_license in license_classifiers %}
-        '{{ license_classifiers[cookiecutter.open_source_license] }}',
+{%- if cookiecutter.license in license_classifiers %}
+        '{{ license_classifiers[cookiecutter.license] }}',
 {%- endif %}
-        'Natural Language :: English',
+{%- if cookiecutter.language in language_classifiers %}
+        '{{ language_classifiers[cookiecutter.language] }}',
+{%- endif %}
+{%- if cookiecutter.python_version in ["2", "6"] %}
         "Programming Language :: Python :: 2",
         'Programming Language :: Python :: 2.7',
+{%- endif %}
+{%- if cookiecutter.python_version in ["3", "6"] %}
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+{%- endif %}
     ],
     description="{{ cookiecutter.project_short_description }}",
     {%- if 'no' not in cookiecutter.command_line_interface|lower %}
@@ -52,8 +63,8 @@ setup(
     },
     {%- endif %}
     install_requires=requirements,
-{%- if cookiecutter.open_source_license in license_classifiers %}
-    license="{{ cookiecutter.open_source_license }}",
+{%- if cookiecutter.license in license_classifiers %}
+    license="{{ cookiecutter.license }}",
 {%- endif %}
     long_description=readme + '\n\n' + history,
     include_package_data=True,

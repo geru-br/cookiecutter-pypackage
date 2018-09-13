@@ -1,4 +1,6 @@
-{% set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}
+{% set is_open_source = cookiecutter.license != 'GERU Intelectual Property' -%}
+{% set is_geru_license = cookiecutter.license == 'GERU Intelectual Property' -%}
+
 {% for _ in cookiecutter.project_name %}={% endfor %}
 {{ cookiecutter.project_name }}
 {% for _ in cookiecutter.project_name %}={% endfor %}
@@ -13,6 +15,10 @@
 .. image:: https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest
         :target: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
+{%- endif %}
+
+{% if is_geru_license %}
+{# #}
 {%- endif %}
 
 {% if cookiecutter.add_pyup_badge == 'y' %}
