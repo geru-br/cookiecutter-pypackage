@@ -1,5 +1,7 @@
 Things to add:
 
+0. Change RST to .MD
 1. Reference to Geru documentation page inside {{cookiecutter.project_slug}}/README.rst
 2. Add integration with CIRCLE-CI
 3. Add integration with Docker/StackManager
+

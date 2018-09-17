@@ -1,0 +1,13 @@
+[flake8]
+ignore =
+    D100 # Missing docstring in public module
+    D101 # Missing docstring in public class
+    D102 # Missing docstring in public method
+    D103 # Missing docstring in public function
+    D104 # Missing docstring in public package
+    D105 # Missing docstring in magic method
+    D106 # Missing docstring in public nested class
+    D107 # Missing docstring in __init__
+exclude = .git,__pycache__,docs/source/conf.py,old,build,dist
+max-complexity = 10
+max-line-length = 130
