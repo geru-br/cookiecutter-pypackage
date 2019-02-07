@@ -8,7 +8,7 @@ Templated Values
 
 The following appear in various parts of your generated project.
 
-full_name
+author_name
     Your full name.
 
 email

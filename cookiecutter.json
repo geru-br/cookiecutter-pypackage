@@ -1,11 +1,11 @@
 {
-  "full_name": "Geru IP Manager",
-  "email": "ipmanager@geru.com.br",
-  "github_username": "igorgeru",
+  "author_name": "Geru Tecnologia e Servicos SA",
+  "email": "cap_liderestecnicos@geru.com.br",
   "project_name": "GERU Python Boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "GERU Python Boilerplate contains all the boilerplate you need to create a Python package.",
-  "project_github_url": "{{ 'https://github.com/geru-br/' + cookiecutter.project_slug }}",
+  "repository_name": "Repository name",
+  "project_github_url": "{{ 'https://github.com/geru-br/' + cookiecutter.repository_name }}",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "version": "0.1.0",
   "use_pytest": "n",
@@ -13,7 +13,7 @@
   "add_pyup_badge": "n",
   "command_line_interface": ["Click", "No command-line interface"],
   "create_author_file": "y",
-  "license": ["GERU Intelectual Property", "MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3" ],
-  "language": ["Portuguese (Brazilian)", "English" ],
-  "python_version": [ "3", "2", "6" ]
+  "license": ["GERU Intellectual Property", "MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3" ],
+  "language": ["English" ],
+  "python_version": [ "3.6", "2.7" ]
 }

@@ -29,7 +29,7 @@ test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest',{%- endif 
 } %}
 
 setup(
-    author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
+    author="{{ cookiecutter.author_name.replace('\"', '\\\"') }}",
     author_email='{{ cookiecutter.email }}',
     url='{{ cookiecutter.project_github_url }}',
     classifiers=[

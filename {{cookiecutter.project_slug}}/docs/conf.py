@@ -18,11 +18,12 @@
 # relative to the documentation root, use os.path.abspath to make it
 # absolute, like shown here.
 #
-import os
-import sys
-sys.path.insert(0, os.path.abspath('..'))
 
 import {{ cookiecutter.project_slug }}
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath('..'))
 
 # -- General configuration ---------------------------------------------
 
@@ -48,8 +49,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'{{ cookiecutter.project_name }}'
-copyright = u"{% now 'local', '%Y' %}, {{ cookiecutter.full_name }}"
-author = u"{{ cookiecutter.full_name }}"
+copyright = u"{% now 'local', '%Y' %}, {{ cookiecutter.author_name }}"
+author = u"{{ cookiecutter.author_name }}"
 
 # The version info for the project you're documenting, acts as replacement
 # for |version| and |release|, also used in various other places throughout
@@ -130,7 +131,7 @@ latex_elements = {
 latex_documents = [
     (master_doc, '{{ cookiecutter.project_slug }}.tex',
      u'{{ cookiecutter.project_name }} Documentation',
-     u'{{ cookiecutter.full_name }}', 'manual'),
+     u'{{ cookiecutter.author_name }}', 'manual'),
 ]
 
 
@@ -158,6 +159,3 @@ texinfo_documents = [
      'One line description of project.',
      'Miscellaneous'),
 ]
-
-
-
