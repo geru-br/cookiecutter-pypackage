@@ -32,7 +32,7 @@ How to contribute
 =================
 
 * Assumptions:
-  * Python {{ " or ".join(cookiecutter.python_supported_versions.split(',')) }} installed.
+  * Python {{ " or ".join(cookiecutter.python_poetry_dependencies_versions.split(',')) }} installed.
 
 1. Clone the lib (and go to directory)
 

@@ -8,6 +8,7 @@
   "version": "0.1.0",
   "poetry_version": "MANDATORY REPLACING",
   "python_image_version": "3.6.7",
-  "python_supported_versions": "^2.7,3.4,^3.6",
+  "python_poetry_dependencies_versions": "^2.7,^3.6",
+  "python_tox_envlist_versions": "py27,py36",
   "license": ["GERU Intelectual Property", "MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3"]
 }
