@@ -9,12 +9,12 @@ homepage = "https://github.com/geru-br/{{ cookiecutter.project_slug }}"
 
 [tool.poetry.dependencies]
 python = "{{ " || ".join(cookiecutter.python_poetry_dependencies_versions.split(',')) }}"
-wheel
+wheel = "*"
 
 [tool.poetry.dev-dependencies]
-flake8
-flake8-docstrings
-pytest
-pytest-cov
-tox
-twine
+flake8 = "*"
+flake8-docstrings = "*"
+pytest = "*"
+pytest-cov = "*"
+tox = "*"
+twine = "*"
