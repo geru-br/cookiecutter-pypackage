@@ -21,7 +21,4 @@ Then:
 Credits
 -------
 
-This repository was inspired by ReferenceCookiecutter_.
-
-.. _Cookiecutter: https://github.com/geru-br/cookiecutter-pypackage
-.. _ReferenceCookiecutter: https://github.com/audreyr/cookiecutter-pypackage
+This repository was inspired by https://github.com/audreyr/cookiecutter-pypackage.
