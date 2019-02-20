@@ -7,11 +7,6 @@ Cookiecutter_ template for a Python package aimed for geru-pypi.
 * GitHub repo: https://github.com/geru-br/cookiecutter-pypackage/
 * Free software: GERU Intelectual Property
 
-Features
---------
-
-* Testing setup with ``unittest`` and ``python setup.py test`` or ``py.test``
-
 Quickstart
 ----------
 
