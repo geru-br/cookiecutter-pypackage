@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.project_short_description }}"
+authors = ["Geru <dev@geru.com.br>"]
+readme = "README.md"
+repository = "https://github.com/geru-br/{{ cookiecutter.project_slug }}"
+homepage = "https://github.com/geru-br/{{ cookiecutter.project_slug }}"
+
+[tool.poetry.dependencies]
+python = "{{ " || ".join(cookiecutter.python_supported_versions.split(',')) }}"
+wheel
+
+[tool.poetry.dev-dependencies]
+flake8
+flake8-docstrings
+pytest
+pytest-cov
+tox
+twine

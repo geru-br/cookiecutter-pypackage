@@ -1,0 +1,48 @@
+version: 2
+jobs:
+
+  test:
+    docker:
+      - image: python:{{ cookiecutter.python_image_version }}
+    working_directory: ~/app
+    steps:
+      - checkout
+      - run:
+          name: install poetry and {{ cookiecutter.project_slug }} dependencies
+          command: |
+            pip install poetry=={{ cookiecutter.poetry_version }}
+            make install
+
+      - run:
+          name: Run Tests
+          command: |
+            make test-all
+
+  deploy:
+    docker:
+      - image: python:{{ cookiecutter.python_image_version }}
+    working_directory: ~/app
+    steps:
+      - checkout
+      - run:
+          name: install poetry
+          command: |
+            pip install poetry=={{ cookiecutter.poetry_version }} twine
+
+      - run:
+          name: bump {{ cookiecutter.project_slug }} minor version, build and publish to geru-pypi
+          command: |
+            make publish
+
+workflows:
+  version: 2
+  test-and-deploy:
+    jobs:
+      - test
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
