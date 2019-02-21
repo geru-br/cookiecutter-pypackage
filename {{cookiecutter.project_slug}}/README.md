@@ -80,7 +80,7 @@ If you need to generate a `major`, `patch` or another different version you can 
 Rationale
 =========
 
-* TODO: Insert here relevant information about project's structure, concepts and operation.
+* TODO: Insert here relevant information about project's structure, concepts and operation. Get a nice example from https://github.com/geru-br/arkham/blob/master/README.md.
 
 
 Credits
