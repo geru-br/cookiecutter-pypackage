@@ -86,7 +86,4 @@ Rationale
 Credits
 =======
 
-This package was created with Cookiecutter_ and the `geru-br/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`geru-br/cookiecutter-pypackage`: https://github.com/geru-br/cookiecutter-pypackage
+This package was created with https://github.com/geru-br/cookiecutter-geru-pypackage project template.

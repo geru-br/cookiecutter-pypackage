@@ -12,7 +12,7 @@ Cookiecutter 1.4.0 or higher)::
 
 Generate a Python package project::
 
-    cookiecutter https://github.com/geru-br/cookiecutter-pypackage.git
+    cookiecutter https://github.com/geru-br/cookiecutter-geru-pypackage.git
 
 Then:
 
